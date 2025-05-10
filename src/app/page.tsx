@@ -1,8 +1,11 @@
+import IntroHandler from "@/components/Main/IntroHandler";
 
 export default function Home() {
-  return (
-    <>
-	
+	return (
+	<>
+		<main>
+			<IntroHandler />
+		</main>
 	</>
-  );
+	)
 }
