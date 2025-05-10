@@ -11,7 +11,7 @@ export default function MainContent() {
       transition={{ duration: 0.75 }}
       className="min-h-screen flex items-center justify-center bg-black text-white"
     >
-      <h1 className="text-4xl font-bold">Sofian's Projects</h1>
+      <h1 className="text-4xl font-bold">Sofian&aposs Projects</h1>
     </motion.div>
   );
 }

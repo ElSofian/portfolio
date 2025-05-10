@@ -36,7 +36,7 @@ export default function Transition({
 	const [showMario, setShowMario] = useState(false);
 	const [exit, setExit] = useState(false);
 
-	const typeAudio = new Audio("/sounds/type.mp3");
+	const typeAudio: HTMLAudioElement = new Audio("/sounds/type.mp3");
 	typeAudio.volume = 0.2;
 
 	useEffect(() => {
@@ -63,7 +63,7 @@ export default function Transition({
 
 				if (showMario) {
 					setShowMario(true);
-					const jump = new Audio("/sounds/mario-jump.mp3");
+					const jump: HTMLAudioElement = new Audio("/sounds/mario-jump.mp3");
 					jump.volume = 0.5;
 					jump.play();
 				}
@@ -75,6 +75,7 @@ export default function Transition({
 			return () => clearTimeout(t2);
 
 		}
+	// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [charIndex, partIndex]);
 
   return (
