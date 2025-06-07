@@ -14,16 +14,16 @@ export default function Projects() {
 						<p className="text-3xl font-bold mt-6">{name}</p>
 						<p className="text-lg font-semibold mt-5">{description}</p>
 						<div className="flex flex-row gap-4 mt-5 mb-1 w-full">
-							<button className="bg-primary dark:text-black px-4 py-2 rounded-lg w-full font-medium uppercase border-2 border-black shadow-little">
-								<Link href={link} target="_blank">
-									Visit
-								</Link>
-							</button>
-							<button className="bg-primary dark:text-black px-4 py-2 rounded-lg w-full font-medium uppercase border-2 border-black shadow-little">
-								<Link href={github} target="_blank">
-									GitHub
-								</Link>
-							</button>
+							<Link href={link} target="_blank" className="w-full">
+								<button className="bg-primary dark:text-black px-4 py-2 rounded-lg w-full font-medium uppercase border-2 border-black shadow-little">
+									Visiter
+								</button>
+							</Link>
+							<Link href={github} target="_blank" className="w-full">
+								<button className="bg-primary dark:text-black px-4 py-2 rounded-lg w-full font-medium uppercase border-2 border-black shadow-little">
+										GitHub
+								</button>
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -52,8 +52,8 @@ export default function Projects() {
 					"TicTacToe",
 					"Jeu en multijoueur avec websockets",
 					"/calipso-dashboard.png",
-					"https://tictactoe.me",
-					"https://github.com/ElSofian/calipso-dashboard"
+					"https://tictactoe.sofianelaloui.me",
+					"https://github.com/ElSofian/tictactoe"
 				)
 			}
 
