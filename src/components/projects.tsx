@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Projects() {
+export default function Projects({ theme }: { theme: "dark" | "light" }) {
 
 	const Project = (name: string, description: string, image: string, link: string, github: string) => {
 		return (
@@ -9,7 +9,11 @@ export default function Projects() {
 				<div className="mx-auto w-3/4">
 					<div className="flex flex-col">
 						<div className="border-2 border-black shadow-little rounded-lg">
-							<Image src={image} alt={name} width={608} height={304} className="rounded-lg" />
+							{theme === "dark" ? (
+								<Image src={`/dark-${image.replace("/", "")}`} alt={name} width={608} height={304} className="rounded-lg" />
+							) : (
+								<Image src={image} alt={name} width={608} height={304} className="rounded-lg" />
+							)}
 						</div>
 						<p className="text-3xl font-bold mt-6">{name}</p>
 						<p className="text-lg font-semibold mt-5">{description}</p>
@@ -45,6 +49,15 @@ export default function Projects() {
 					"/calipso-dashboard.png",
 					"https://demo.calipso.me",
 					"https://github.com/ElSofian/calipso-dashboard"
+				)
+			}
+			{
+				Project(
+					"Markdown Live Editor",
+					"Un convertisseur texte vers markdown en temps réel",
+					"/mk-editor.png",
+					"https://mk-editor.sofianelaloui.me",
+					"https://github.com/ElSofian/markdown-live-editor"
 				)
 			}
 			{

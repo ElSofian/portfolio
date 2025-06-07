@@ -21,8 +21,8 @@ export default function Main() {
 		document.documentElement.classList.toggle("dark", theme === "dark");
 	}
 
-	const handlePageChange = () => {
-		setPage(page => page === "home" ? "projects" : "home");
+	const handlePageChange = (page: string) => {
+		setPage(page);
 	}
 
 	return (
@@ -39,20 +39,20 @@ export default function Main() {
 				<main className="w-full h-full bg-secondary dark:bg-secondary-dark">
 
 					<nav className="grid grid-cols-[1fr_1fr_50px] border-b-4 border-black">
-						<div className={`flex items-center justify-center p-3 cursor-click ${page === "home" ? "bg-black text-white" : "bg-primary text-black"}`} onClick={handlePageChange}>
+						<div className={`flex items-center justify-center p-3 cursor-click ${page === "home" ? "bg-black text-white" : "bg-primary text-black"}`} onClick={() => handlePageChange("home")}>
 							<span className="text-center text-xl font-semibold uppercase">Home</span>
 						</div>
-						<div className={`flex items-center justify-center p-3 border-r-2 border-black cursor-click ${page === "projects" ? "bg-black text-white" : "bg-primary text-black"}`} onClick={handlePageChange}>
+						<div className={`flex items-center justify-center p-3 border-r-2 border-black cursor-click ${page === "projects" ? "bg-black text-white" : "bg-primary text-black"}`} onClick={() => handlePageChange("projects")}>
 							<span className="text-center text-xl font-semibold uppercase">Projects</span>
 						</div>
-						<div className="flex items-center justify-center bg-primary cursor-click">
-							<i className={`fa-regular ${theme === "dark" ? "fa-sun-bright" : "fa-moon"} fa-xl`} onClick={toggleTheme} />
+						<div className="flex items-center justify-center bg-primary cursor-click" onClick={toggleTheme}>
+							<i className={`fa-regular ${theme === "dark" ? "fa-sun-bright" : "fa-moon"} fa-xl`} />
 						</div>
 					</nav>
 
 					{page === "home"
 						? <Home />
-						: <Projects />
+						: <Projects theme={theme} />
 					}
 				</main>
 				</div>
