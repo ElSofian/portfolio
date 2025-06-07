@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Projects() {
 
@@ -14,10 +15,14 @@ export default function Projects() {
 						<p className="text-lg font-semibold mt-5">{description}</p>
 						<div className="flex flex-row gap-4 mt-5 mb-1 w-full">
 							<button className="bg-primary dark:text-black px-4 py-2 rounded-lg w-full font-medium uppercase border-2 border-black shadow-little">
-								Visit
+								<Link href={link} target="_blank">
+									Visit
+								</Link>
 							</button>
 							<button className="bg-primary dark:text-black px-4 py-2 rounded-lg w-full font-medium uppercase border-2 border-black shadow-little">
-								GitHub
+								<Link href={github} target="_blank">
+									GitHub
+								</Link>
 							</button>
 						</div>
 					</div>
