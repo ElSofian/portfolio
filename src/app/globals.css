@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --font-primary: 'Geist', system-ui;
+}
+
+@theme {
+	--color-dark: #1F1F1F;
+	--color-primary: #7A83FF;
+	--color-secondary: #E0E2FF;
+	--color-secondary-dark: #221F47;
+	--shadow-main: 10px 10px 0px 0px #000000;
+	--shadow-little: 4px 4px 0px 0px #000000;
+}
+
+*,
+*::before,
+*::after {
+	cursor: url("/cursor.png"), auto;
+}
+
+button {
+	cursor: url("/cursor-click.png"), auto;
+}
+
+.cursor-click {
+	cursor: url("/cursor-click.png"), auto;
+}
