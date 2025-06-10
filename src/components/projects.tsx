@@ -64,8 +64,8 @@ export default function Projects({ theme }: { theme: "dark" | "light" }) {
 				Project(
 					"TicTacToe",
 					"Jeu en multijoueur avec websockets",
-					"/calipso-dashboard.png",
-					"https://tictactoe.sofianelaloui.me",
+					"/tictactoe.png",
+					"https://ttt.sofianelaloui.me",
 					"https://github.com/ElSofian/tictactoe"
 				)
 			}
