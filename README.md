@@ -7,7 +7,7 @@
 
 ![Aperçu du Portfolio](./public/portfolio.png)
 
-Un portfolio personnel au style « fenêtre néobrutaliste » construit avec Next.js, React et Tailwind CSS pour présenter mes projets et compétences.
+Un portfolio personnel au style simple et sobre construit avec Next.js, React et Tailwind CSS pour présenter mes projets et compétences.
 
 ---
 
