@@ -22,7 +22,7 @@ https://sofianelaloui.me
 - **Framework** : Next.js (React + TypeScript)  
 - **Styles** : Tailwind CSS
 - **Linting & formatage** : ESLint 
-- **Hébergement** : Vercel (recommandé)  
+- **Hébergement** : Vercel
 
 ---
 
